@@ -37,7 +37,7 @@ app.post('/contact', async (req, res) => {
   const { username, userPhone, userWtsp, message } = req.body;
 
   const dateIST = moment().tz('Asia/kolkata').format('YYYY-MM-DD HH:mm:ss');
-  if (!username || !userPhone || !message || !userWtsp) {
+  if (!username || !userPhone || !message) {
     return res.status(400).json({ error: "All fields are required" });
   }
 
